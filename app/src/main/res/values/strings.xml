@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GameTwo</string>
+    <string name="onlyAddition">Solo sumas</string>
+    <string name="additionAndSubtraction">Sumas y Restas</string>
 </resources>

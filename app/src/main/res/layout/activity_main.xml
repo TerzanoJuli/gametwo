@@ -43,7 +43,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/operator"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -60,7 +62,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/term1"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -77,7 +81,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/term2"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -94,7 +100,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/term3"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -124,7 +132,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/term4"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -141,7 +151,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result1"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -158,7 +170,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result2"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -175,7 +189,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result3"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -205,7 +221,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/term5"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -222,7 +240,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result4"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -239,7 +259,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result5"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -256,7 +278,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result6"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -285,7 +309,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/term6"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -302,7 +328,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result7"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -319,7 +347,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result8"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -336,7 +366,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/result9"
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -346,5 +378,98 @@
 
         </LinearLayout>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="0.3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:background="#ffffffff">
+
+            <TextView
+                android:id="@+id/option0"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp" />
+
+            <TextView
+                android:id="@+id/option1"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp" />
+
+            <TextView
+                android:id="@+id/option2"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"/>
+
+            <TextView
+                android:id="@+id/option3"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"/>
+
+            <TextView
+                android:id="@+id/option4"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"/>
+            <TextView
+                android:id="@+id/option5"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"/>
+            <TextView
+                android:id="@+id/option6"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"/>
+            <TextView
+                android:id="@+id/option7"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"/>
+            <TextView
+                android:id="@+id/option8"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>
