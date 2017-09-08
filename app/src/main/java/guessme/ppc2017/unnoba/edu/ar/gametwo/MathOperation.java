@@ -18,22 +18,19 @@ public class MathOperation {
     public static final String ADD = "+";
     public static final String SUBTRACT = "-";
 
-    private int random1;
-    private int random2;
-    private ArrayList<Integer> results= new ArrayList<Integer>();
-    private ArrayList<Integer> row=new ArrayList<Integer>();
-    private ArrayList<Integer> column= new ArrayList<Integer>();
-    private ArrayList<Integer> operandos= new ArrayList<Integer>();
+
+    private ArrayList<Integer> results = new ArrayList<Integer>();
+    private ArrayList<Integer> row = new ArrayList<Integer>();
+    private ArrayList<Integer> column = new ArrayList<Integer>();
+    private ArrayList<Integer> operandos = new ArrayList<Integer>();
     private String operator;
-    private int result;
     private List options;
 
     /**
      * El constructor recibe dos caras de dados, que seran utilizadas para calcular opciones validas
-     *
      */
     public MathOperation(ArrayList<Integer> table) {
-        this.operandos= table;
+        this.operandos = table;
 
         // Generamos un operador, acorde a la configuracion y luego al azar
         this.operator = generateOperator();
@@ -41,8 +38,8 @@ public class MathOperation {
         // Guardamos el resultado de la operacion
         this.results = calculateOperation();
 
-        // Generamos las opciones, asegurandonos de que esten las 3 correctas (los numeros
-        // de las caras de los dados y elresultado de la operacion
+        // Generamos las opciones, asegurandonos de que esten correctas
+
         this.options = generateOptions(this.getResults());
     }
 
@@ -52,24 +49,24 @@ public class MathOperation {
     private ArrayList<Integer> calculateOperation() {
         // Verifica que el orden de los operadores sea el correcto si es resta (primero el mas grande)
         //verifyOrderOfOperators();
-        for (int i=0; i<=2; i++){
+        for (int i = 0; i <= 2; i++) {
             row.add(operandos.get(i));
         }
-        for (int i=3; i<=5; i++){
+        for (int i = 3; i <= 5; i++) {
             column.add(operandos.get(i));
         }
 
-        // Si es una resta, resta los numeros de las caras de los dados, sino los suma
-        if ( operator.equals(SUBTRACT) ) {
-            for (int i=0; i<=2; i++){
-                for (int j=0; j<=2; j++) {
+        // Si es una resta, resta los numeros, sino los suma
+        if (operator.equals(SUBTRACT)) {
+            for (int i = 0; i <= 2; i++) {
+                for (int j = 0; j <= 2; j++) {
                     results.add(row.get(i) - column.get(j));
                 }
             }
             return results;
         } else {
-            for (int i=0; i<=2; i++){
-                for (int j=0; j<=2; j++) {
+            for (int i = 0; i <= 2; i++) {
+                for (int j = 0; j <= 2; j++) {
                     results.add(row.get(i) + column.get(j));
                 }
             }
@@ -84,15 +81,15 @@ public class MathOperation {
      * cambiando el orden de los operandos si es necesario, para que el primero sea el mayor
      */
     /** private void verifyOrderOfOperators() {
-        if ( operator.equals(SUBTRACT) ) {
-            if ( random1 < random2 ) {
-                // Intercambiamos la cara de dado 1 por la 2
-                int aux = random1;
-                random1 = random2;
-                random2 = aux;
-            }
-        }
-    }
+     if ( operator.equals(SUBTRACT) ) {
+     if ( random1 < random2 ) {
+     // Intercambiamos la cara de dado 1 por la 2
+     int aux = random1;
+     random1 = random2;
+     random2 = aux;
+     }
+     }
+     }
      */
 
     /**
@@ -105,7 +102,7 @@ public class MathOperation {
         Configuration config = Configuration.getConfig();
 
         // Si solo estan permitidas las sumas, entonces devolvemos el String asociado a la suma
-        if ( config.isOnlyAddition() ) {
+        if (config.isOnlyAddition()) {
             return ADD;
         }
 
@@ -114,7 +111,7 @@ public class MathOperation {
         double randomNumber = Math.random();
 
         // Si dicho numero es menor que 0.5 entonces es suma, de lo contrario, resta
-        if ( randomNumber < 0.5 ) {
+        if (randomNumber < 0.5) {
             return ADD;
         } else {
             return SUBTRACT;
@@ -128,7 +125,9 @@ public class MathOperation {
 
         // Agregamos las opciones correctas a la lista
         List<Integer> options = new ArrayList<>();
-        options= results;
+        for (int i=0; i<= 8; i++){
+            options.add(results.get(i));
+        }
 
 
         // Desordenamos la lista
@@ -148,18 +147,6 @@ public class MathOperation {
 
     public List getOptions() {
         return options;
-    }
-
-    public int getRandom1() {
-        return random1;
-    }
-
-    public int getRandom2() {
-        return random2;
-    }
-
-    public int getResult() {
-        return result;
     }
 
     public ArrayList<Integer> getResults() {

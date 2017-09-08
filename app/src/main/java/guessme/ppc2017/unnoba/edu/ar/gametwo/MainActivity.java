@@ -13,13 +13,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int random1;
-    private int random2;
-    private int random3;
-    private int random4;
-    private int random5;
-    private int random6;
-    //table = new ArrayList<Integer>();
 
     private MathOperation mathOperation;
     private ArrayList<Integer> table = new ArrayList<Integer>();
@@ -56,30 +49,47 @@ public class MainActivity extends AppCompatActivity {
 
         // Creamos la primer respuesta
 
-        new Answer(this,renderer.getResults()[0],mathOperation.getResults().get(0) , renderer, sounds);
+        new Answer(this,renderer.getResult1(),mathOperation.getResults().get(0) , renderer, sounds);
+
+
+
 
 
     }
 
     public void evaluateAllAnswers() {
+
         // Incrementamos el numero de aciertos
         numberOfHits += 1;
 
         switch (numberOfHits) {
             case 1:
                 // Dado que la primer casilla fue bien respondida, creamos la segunda
-                new Answer(this, renderer.getResults()[1], mathOperation.getResults().get(1), renderer, sounds);
+                new Answer(this, renderer.getResult2(), mathOperation.getResults().get(1), renderer, sounds);
                 break;
             case 2:
                 // Dado que la segunda casilla fue bien respondida, creamos la tercera
-                new Answer(this, renderer.getResults()[2], mathOperation.getResults().get(2), renderer, sounds);
+                new Answer(this, renderer.getResult3(), mathOperation.getResults().get(2), renderer, sounds);
                 break;
             case 3:
-                new Answer(this, renderer.getResults()[3], mathOperation.getResults().get(3), renderer, sounds);
-                // Si estamos aqui, es porque ya fueron bien respondidas las 3 casillas
-
-                // Dentro del metodo run de nuestro runnable guardamos el codigo que queremos
-                // ejecutar (pero aun no lo hacemos)
+                new Answer(this, renderer.getResult4(), mathOperation.getResults().get(3), renderer, sounds);
+                break;
+            case 4:
+                new Answer(this, renderer.getResult5(), mathOperation.getResults().get(4), renderer, sounds);
+                break;
+            case 5:
+                new Answer(this, renderer.getResult6(), mathOperation.getResults().get(5), renderer, sounds);
+                break;
+            case 6:
+                new Answer(this, renderer.getResult7(), mathOperation.getResults().get(6), renderer, sounds);
+                break;
+            case 7:
+                new Answer(this, renderer.getResult8(), mathOperation.getResults().get(7), renderer, sounds);
+                break;
+            case 8:
+                new Answer(this, renderer.getResult9(), mathOperation.getResults().get(8), renderer, sounds);
+                break;
+            case 9:
                 Runnable runnable = new Runnable() {
                     @Override
                     public void run() {
@@ -94,10 +104,18 @@ public class MainActivity extends AppCompatActivity {
                 Handler handler = new Handler();
                 // Ejecuta el codigo que esta en run() dentro de runnable luego de 3000 milisegundos
                 handler.postDelayed(runnable, 3000);
+                break;
+
+        }
+                // Si estamos aqui, es porque ya fueron bien respondidas las 3 casillas
+
+                // Dentro del metodo run de nuestro runnable guardamos el codigo que queremos
+                // ejecutar (pero aun no lo hacemos)
+
 
 
         }
-    }
+
         public ArrayList<Integer> getTable () {
             return table;
         }

@@ -1,5 +1,6 @@
 package guessme.ppc2017.unnoba.edu.ar.gametwo;
 
+import android.graphics.Typeface;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -16,6 +17,8 @@ public class Answer {
     private Sounds sounds;
     private Renderer renderer;
     private MainActivity mainActivity;
+    private boolean answered;
+    private Typeface font;
 
     /**
      * Constructor que hace el setteo inicial y agrega un OnDragListener para realizar la evaluacion.
@@ -70,10 +73,13 @@ public class Answer {
         if ( chosenNumber == expectedNumber ) {
             // Emitimos sonido de exito
             sounds.emitSuccessSound();
+
             // A nuestra casilla le setteamos el valor correcto (stringChosenNumber)
             uiElement.setText(stringChosenNumber);
             // A la opcion (vista) la dejamos vacia
+
             option.setText("");
+
             // Eliminamos el OnDragListener de este elemento, asi no se pueden seguir arrastrando
             // mas elementos sobre el
             uiElement.setOnDragListener(null);
@@ -87,5 +93,7 @@ public class Answer {
             sounds.emitErrorSound();
         }
     }
+
+
 
 }
